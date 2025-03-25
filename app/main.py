@@ -11,7 +11,7 @@ from app.utils import get_intent
 load_dotenv()
 
 app = FastAPI()
-model = SentenceTransformer('all-MiniLM-L6-v2')
+model = SentenceTransformer('all-MiniLM-L6-v2',device="cpu")
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 
